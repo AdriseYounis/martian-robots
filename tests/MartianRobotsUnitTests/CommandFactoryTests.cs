@@ -27,6 +27,31 @@ public class CommandFactoryTests
             .BDDfy();
     }
     
+    [Test]
+    public void GivenRightCommand_WhenCommandFactoryIsCreated_ThenTheRightCommandIsCreated()
+    {
+        this.Given(_ => ACommand(Command.Right))
+            .And(_ => MarsCoordinates(new Coordinates(5, 3)))
+            .And(_ => AMarsSurface())
+            .And(_ => CurrentDirectionIs(new North()))
+            .When(_ => ExecutingTheCommand())
+            .Then(_ => TheDirectionIs("E"))
+            .BDDfy();
+    }
+    
+    [Test]
+    public void GivenForwardCommand_WhenCommandFactoryIsCreated_ThenTheForwardCommandIsCreated()
+    {
+        this.Given(_ => ACommand(Command.Forward))
+            .And(_ => MarsCoordinates(new Coordinates(5, 3)))
+            .And(_ => AMarsSurface())
+            .And(_ => TheRobotLocationIsSet(new Coordinates(0, 0)))
+            .And(_ => CurrentDirectionIs(new North()))
+            .When(_ => ExecutingTheCommand())
+            .Then(_ => TheRobotMovesForward())
+            .BDDfy();
+    }
+    
     private void TheDirectionIs(string direction)
     {
         _marsSurface.GetDirection().ToString().Should().Be(direction);
@@ -55,5 +80,15 @@ public class CommandFactoryTests
     private void ACommand(char command)
     {
         _command = command;
+    }
+    
+    private void TheRobotLocationIsSet(Coordinates coordinates)
+    {
+        _marsSurface.SetRobotLocation(coordinates);
+    }
+
+    private void TheRobotMovesForward()
+    {
+        _marsSurface.GetRobotLocation().GetY().Should().Be(1);
     }
 }

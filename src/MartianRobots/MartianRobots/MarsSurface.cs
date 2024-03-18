@@ -8,7 +8,8 @@ public class MarsSurface
     private readonly Coordinates _upperBound;
     private readonly List<Coordinates> _scentedCoordinates = new();
     private IDirection _direction;
- 
+    private Coordinates _robotLocation;
+
     public MarsSurface(Coordinates upperBound)
     {
         _upperBound = upperBound;
@@ -39,4 +40,7 @@ public class MarsSurface
 
     public void SetDirection(IDirection direction) => _direction = direction;
     public IDirection GetDirection() => _direction;
+    
+    public void SetRobotLocation(Coordinates coordinates) => _robotLocation = coordinates;
+    public Coordinates GetRobotLocation() => _robotLocation;
 }
