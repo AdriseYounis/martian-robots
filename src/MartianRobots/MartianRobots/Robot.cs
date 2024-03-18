@@ -34,14 +34,7 @@ public class Robot
 
             if (c.Equals('F'))
             {
-                var previousCoordinates = new Coordinates(_coordinates.GetX(), _coordinates.GetY());
-                
-                _coordinates = _direction.Move(_coordinates);
-                
-                if (_surface.IsRobotOutOfBounds(_coordinates) && !_surface.IsScented(previousCoordinates))
-                {
-                    _surface.AddScentedCoordinates(previousCoordinates);   
-                }
+              
             }
         }
 

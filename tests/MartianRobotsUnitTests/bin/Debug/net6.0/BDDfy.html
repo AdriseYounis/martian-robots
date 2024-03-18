@@ -29,13 +29,13 @@ body{margin:0;padding:0;padding-bottom:40px;max-width:100%;background-color:#fff
           <li class='scenarioSummary'>
             <div class='summaryLine'>
               <div class='summaryLabel'>Scenarios</div>
-              <span class='summaryCount'>1</span>
+              <span class='summaryCount'>3</span>
             </div>
           </li>
           <li class='Passed'>
             <div class='summaryLine'>
               <div class='summaryLabel'>Passed</div>
-              <span class='summaryCount'>1</span>
+              <span class='summaryCount'>3</span>
             </div>
           </li>
           <li class='Inconclusive'>
@@ -74,10 +74,10 @@ body{margin:0;padding:0;padding-bottom:40px;max-width:100%;background-color:#fff
               </div>
               <div class='scenarios'>
                 <div class='scenario'>
-                  <div class='Passed canToggle scenarioTitle' data-toggle-target='scenario-1'>GivenRightCommand WhenCommandFactoryIsCreated ThenTheRightCommandIsCreated</div>
+                  <div class='Passed canToggle scenarioTitle' data-toggle-target='scenario-1'>GivenForwardCommand WhenCommandFactoryIsCreated ThenTheForwardCommandIsCreated</div>
                   <ul class='steps' id='scenario-1'>
                     <li class='step Passed  SetupState ' data-toggle-target='step-1-1' >
-                      <span>Given a command R</span>
+                      <span>Given a command F</span>
                     </li>
                     <li class='step Passed  ConsecutiveSetupState ' data-toggle-target='step-1-2' >
                       <span>And mars coordinates MartianRobots.Models.Coordinates</span>
@@ -86,12 +86,61 @@ body{margin:0;padding:0;padding-bottom:40px;max-width:100%;background-color:#fff
                       <span>And a mars surface</span>
                     </li>
                     <li class='step Passed  ConsecutiveSetupState ' data-toggle-target='step-1-4' >
+                      <span>And the robot location is set MartianRobots.Models.Coordinates</span>
+                    </li>
+                    <li class='step Passed  ConsecutiveSetupState ' data-toggle-target='step-1-5' >
                       <span>And current direction is N</span>
                     </li>
-                    <li class='step Passed  Transition ' data-toggle-target='step-1-5' >
+                    <li class='step Passed  Transition ' data-toggle-target='step-1-6' >
                       <span>When executing the command</span>
                     </li>
-                    <li class='step Passed  Assertion ' data-toggle-target='step-1-6' >
+                    <li class='step Passed  Assertion ' data-toggle-target='step-1-7' >
+                      <span>Then the robot moves forward</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class='scenario'>
+                  <div class='Passed canToggle scenarioTitle' data-toggle-target='scenario-2'>GivenLeftCommand WhenCommandFactoryIsCreated ThenTheLeftCommandIsCreated</div>
+                  <ul class='steps' id='scenario-2'>
+                    <li class='step Passed  SetupState ' data-toggle-target='step-2-1' >
+                      <span>Given a command L</span>
+                    </li>
+                    <li class='step Passed  ConsecutiveSetupState ' data-toggle-target='step-2-2' >
+                      <span>And mars coordinates MartianRobots.Models.Coordinates</span>
+                    </li>
+                    <li class='step Passed  ConsecutiveSetupState ' data-toggle-target='step-2-3' >
+                      <span>And a mars surface</span>
+                    </li>
+                    <li class='step Passed  ConsecutiveSetupState ' data-toggle-target='step-2-4' >
+                      <span>And current direction is N</span>
+                    </li>
+                    <li class='step Passed  Transition ' data-toggle-target='step-2-5' >
+                      <span>When executing the command</span>
+                    </li>
+                    <li class='step Passed  Assertion ' data-toggle-target='step-2-6' >
+                      <span>Then the direction is W</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class='scenario'>
+                  <div class='Passed canToggle scenarioTitle' data-toggle-target='scenario-3'>GivenRightCommand WhenCommandFactoryIsCreated ThenTheRightCommandIsCreated</div>
+                  <ul class='steps' id='scenario-3'>
+                    <li class='step Passed  SetupState ' data-toggle-target='step-3-1' >
+                      <span>Given a command R</span>
+                    </li>
+                    <li class='step Passed  ConsecutiveSetupState ' data-toggle-target='step-3-2' >
+                      <span>And mars coordinates MartianRobots.Models.Coordinates</span>
+                    </li>
+                    <li class='step Passed  ConsecutiveSetupState ' data-toggle-target='step-3-3' >
+                      <span>And a mars surface</span>
+                    </li>
+                    <li class='step Passed  ConsecutiveSetupState ' data-toggle-target='step-3-4' >
+                      <span>And current direction is N</span>
+                    </li>
+                    <li class='step Passed  Transition ' data-toggle-target='step-3-5' >
+                      <span>When executing the command</span>
+                    </li>
+                    <li class='step Passed  Assertion ' data-toggle-target='step-3-6' >
                       <span>Then the direction is E</span>
                     </li>
                   </ul>
@@ -100,7 +149,7 @@ body{margin:0;padding:0;padding-bottom:40px;max-width:100%;background-color:#fff
             </div>
           </li>
         </ul>
-        <p><span>Tested at: 18/03/2024 15:45:07</span></p>
+        <p><span>Tested at: 18/03/2024 15:46:06</span></p>
       </div>
     </div>
     <div class='footer'>Powered by <a href='https://github.com/TestStack/TestStack.BDDfy'>BDDfy</a> framework</div>
