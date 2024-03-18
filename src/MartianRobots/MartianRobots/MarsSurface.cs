@@ -1,3 +1,4 @@
+using MartianRobots.Interfaces.cs;
 using MartianRobots.Models;
 
 namespace MartianRobots;
@@ -6,6 +7,7 @@ public class MarsSurface
 {
     private readonly Coordinates _upperBound;
     private readonly List<Coordinates> _scentedCoordinates = new();
+    private IDirection _direction;
  
     public MarsSurface(Coordinates upperBound)
     {
@@ -34,4 +36,7 @@ public class MarsSurface
         
         return x > _upperBound.GetX() || x < 0 || y > _upperBound.GetY() || y < 0;
     }
+
+    public void SetDirection(IDirection direction) => _direction = direction;
+    public IDirection GetDirection() => _direction;
 }
