@@ -16,6 +16,15 @@ public class Tests
 
         position.Should().Be(expectedDirection);
     }
+    
+    [TestCase("", "N")]
+    [TestCase("R", "E")]
+    public void TurnRight(string command, string expectedDirection)
+    {
+        var position = Robot.ExecuteCommand(command);
+
+        position.Should().Be(expectedDirection);
+    }
 }
 
 public class Robot
