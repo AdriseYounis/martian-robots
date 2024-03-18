@@ -1,5 +1,6 @@
 using FluentAssertions;
 using MartianRobots;
+using MartianRobots.Commands;
 using MartianRobots.Constants;
 using MartianRobots.Direction.cs;
 using MartianRobots.Interfaces.cs;
@@ -54,31 +55,5 @@ public class CommandFactoryTests
     private void ACommand(char command)
     {
         _command = command;
-    }
-}
-
-internal class CommandFactory
-{
-    public static void ExecuteCommand(char command, MarsSurface surface)
-    {
-        if (command == Command.Left)
-        {
-            new TurnLeftCommand(surface).Execute();
-        }
-    }
-}
-
-internal class TurnLeftCommand
-{
-    private readonly MarsSurface _surface;
-    
-    public TurnLeftCommand(MarsSurface surface)
-    {
-        _surface = surface;
-    }
-
-    public void Execute()
-    {
-        _surface.SetDirection(_surface.GetDirection().TurnLeft());
     }
 }

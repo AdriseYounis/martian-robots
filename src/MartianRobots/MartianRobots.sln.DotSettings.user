@@ -6,5 +6,6 @@
     &lt;TestId&gt;NUnit3x::7EA6672B-A7E2-41E2-BC10-EAD1ADBF021F::net6.0::MartianRobotsUnitTests.DirectionTests&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::7EA6672B-A7E2-41E2-BC10-EAD1ADBF021F::net6.0::MartianRobotsUnitTests.MarsSurfaceTests&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::7EA6672B-A7E2-41E2-BC10-EAD1ADBF021F::net6.0::MartianRobotsUnitTests.CommandFactoryTests.GivenLeftCommand_WhenCommandFactoryIsCreated_ThenTheLeftCommandIsCreated&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::7EA6672B-A7E2-41E2-BC10-EAD1ADBF021F::net6.0::MartianRobotsUnitTests.CommandFactoryTests&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
