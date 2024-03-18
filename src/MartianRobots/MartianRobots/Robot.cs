@@ -1,15 +1,16 @@
 using MartianRobots.Interfaces.cs;
+using MartianRobots.Models;
 
 namespace MartianRobots;
 
 public class Robot
 {
+    private Coordinates _coordinates;
     private IDirection _direction;
-    private int _x;
-    private int _y;
 
-    public Robot(IDirection direction)
+    public Robot(Coordinates coordinates, IDirection direction)
     {
+        _coordinates = coordinates;
         _direction = direction;
     }
     
@@ -34,21 +35,21 @@ public class Robot
                 switch (_direction.ToString())
                 {
                     case "N":
-                        _y++;
+                        _coordinates = new Coordinates(_coordinates.GetX(), _coordinates.GetY() + 1);
                         break;
                     case "E":
-                        _x++;
+                        _coordinates = new Coordinates(_coordinates.GetX() + 1, _coordinates.GetY());
                         break;
                     case "S":
-                        _y--;
+                        _coordinates = new Coordinates(_coordinates.GetX(), _coordinates.GetY() - 1);
                         break;
                     case "W":
-                        _x--;
+                        _coordinates = new Coordinates(_coordinates.GetX() - 1, _coordinates.GetY());
                         break;
                 }
             }
         }
 
-        return $"{_x} {_y} {_direction}";
+        return $"{_coordinates.GetX()} {_coordinates.GetY()} {_direction}";
     }
 }

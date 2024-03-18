@@ -2,6 +2,7 @@ using FluentAssertions;
 using MartianRobots;
 using MartianRobots.Direction.cs;
 using MartianRobots.Interfaces.cs;
+using MartianRobots.Models;
 using TestStack.BDDfy;
 
 namespace MartianRobotsUnitTests;
@@ -10,6 +11,7 @@ public class Tests
 {
     private IDirection _direction;
     private string _expectedPosition;
+    private Coordinates _robotPosition;
     
     [TestCase("", "N")]
     [TestCase("L", "W")]
@@ -19,6 +21,7 @@ public class Tests
     public void TurnLeft(string command, string expectedDirection)
     {
         this.Given(_ => ADirection(new North()))
+            .And(_ => TheRobotPosition(new Coordinates(0, 0)))
             .When(_ => TheRobotExecutesTheCommand(command))
             .Then(_ => TheExpectedPositionIs(expectedDirection))
             .BDDfy();
@@ -32,6 +35,7 @@ public class Tests
     public void TurnRight(string command, string expectedDirection)
     {
         this.Given(_ => ADirection(new North()))
+            .And(_ => TheRobotPosition(new Coordinates(0, 0)))
             .When(_ => TheRobotExecutesTheCommand(command))
             .Then(_ => TheExpectedPositionIs(expectedDirection))
             .BDDfy();
@@ -45,11 +49,29 @@ public class Tests
     public void MoveForward(string command, string expectedPosition)
     {
         this.Given(_ => ADirection(new North()))
+            .And(_ => TheRobotPosition(new Coordinates(0, 0)))
             .When(_ => TheRobotExecutesTheCommand(command))
             .Then(_ => TheExpectedPositionIs(expectedPosition))
             .BDDfy();
     }
     
+    /*
+    [Test]
+    public void MoveRobot_RightAndForward()
+    {
+        this.Given(_ => ADirection(new East()))
+            .And(_ => TheRobotPosition(new Coordinates(1,1)))
+            .When(_ => TheRobotExecutesTheCommand("RFRFRFRF"))
+            .Then(_ => TheExpectedPositionIs("1 1 E"))
+            .BDDfy();
+    }
+    */
+
+    private void TheRobotPosition(Coordinates coordinates)
+    {
+        _robotPosition = coordinates;
+    }
+
     private void ADirection(IDirection direction)
     {
         _direction = direction;
@@ -62,7 +84,7 @@ public class Tests
 
     private void TheRobotExecutesTheCommand(string command)
     {
-        var robot  = new Robot(_direction);
+        var robot  = new Robot(_robotPosition, _direction);
         _expectedPosition = robot.ExecuteCommand(command);
     }
 }
