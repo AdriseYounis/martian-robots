@@ -5,6 +5,8 @@ namespace MartianRobots;
 public class Robot
 {
     private IDirection _direction;
+    private int _x;
+    private int _y;
 
     public Robot(IDirection direction)
     {
@@ -26,8 +28,16 @@ public class Robot
             {
                 _direction = _direction.TurnRight();
             }
+
+            if (c.Equals('F'))
+            {
+                if (_direction.ToString() == "N")
+                {
+                    _y++;
+                }
+            }
         }
 
-        return $"0 0 {_direction}";
+        return $"{_x} {_y} {_direction}";
     }
 }

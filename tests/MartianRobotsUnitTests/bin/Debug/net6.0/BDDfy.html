@@ -29,13 +29,13 @@ body{margin:0;padding:0;padding-bottom:40px;max-width:100%;background-color:#fff
           <li class='scenarioSummary'>
             <div class='summaryLine'>
               <div class='summaryLabel'>Scenarios</div>
-              <span class='summaryCount'>1</span>
+              <span class='summaryCount'>2</span>
             </div>
           </li>
           <li class='Passed'>
             <div class='summaryLine'>
               <div class='summaryLabel'>Passed</div>
-              <span class='summaryCount'>1</span>
+              <span class='summaryCount'>2</span>
             </div>
           </li>
           <li class='Inconclusive'>
@@ -87,11 +87,25 @@ body{margin:0;padding:0;padding-bottom:40px;max-width:100%;background-color:#fff
                     </li>
                   </ul>
                 </div>
+                <div class='scenario'>
+                  <div class='Passed canToggle scenarioTitle' data-toggle-target='scenario-2'>Move forward</div>
+                  <ul class='steps' id='scenario-2'>
+                    <li class='step Passed  SetupState ' data-toggle-target='step-2-1' >
+                      <span>Given a direction N</span>
+                    </li>
+                    <li class='step Passed  Transition ' data-toggle-target='step-2-2' >
+                      <span>When the robot executes the command F</span>
+                    </li>
+                    <li class='step Passed  Assertion ' data-toggle-target='step-2-3' >
+                      <span>Then the expected position is 0 1 N</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </li>
         </ul>
-        <p><span>Tested at: 18/03/2024 14:59:37</span></p>
+        <p><span>Tested at: 18/03/2024 15:02:33</span></p>
       </div>
     </div>
     <div class='footer'>Powered by <a href='https://github.com/TestStack/TestStack.BDDfy'>BDDfy</a> framework</div>
