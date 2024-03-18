@@ -55,7 +55,6 @@ public class Tests
             .BDDfy();
     }
     
-    /*
     [Test]
     public void MoveRobot_RightAndForward()
     {
@@ -65,8 +64,7 @@ public class Tests
             .Then(_ => TheExpectedPositionIs("1 1 E"))
             .BDDfy();
     }
-    */
-
+ 
     private void TheRobotPosition(Coordinates coordinates)
     {
         _robotPosition = coordinates;
