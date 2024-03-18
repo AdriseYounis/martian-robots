@@ -32,21 +32,7 @@ public class Robot
 
             if (c.Equals('F'))
             {
-                switch (_direction.ToString())
-                {
-                    case "N":
-                        _coordinates = new Coordinates(_coordinates.GetX(), _coordinates.GetY() + 1);
-                        break;
-                    case "E":
-                        _coordinates = new Coordinates(_coordinates.GetX() + 1, _coordinates.GetY());
-                        break;
-                    case "S":
-                        _coordinates = new Coordinates(_coordinates.GetX(), _coordinates.GetY() - 1);
-                        break;
-                    case "W":
-                        _coordinates = new Coordinates(_coordinates.GetX() - 1, _coordinates.GetY());
-                        break;
-                }
+                _coordinates = _direction.Move(_coordinates);
             }
         }
 
