@@ -37,6 +37,15 @@ public class Tests
             .BDDfy();
     }
     
+    [TestCase("", "0 0 N")]
+    public void MoveForward(string command, string expectedPosition)
+    {
+        this.Given(_ => ADirection(new North()))
+            .When(_ => TheRobotExecutesTheCommand(command))
+            .Then(_ => TheExpectedPositionIs(expectedPosition))
+            .BDDfy();
+    }
+    
     private void ADirection(IDirection direction)
     {
         _direction = direction;
