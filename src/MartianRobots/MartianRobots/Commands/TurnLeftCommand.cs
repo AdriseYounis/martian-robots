@@ -1,6 +1,6 @@
 namespace MartianRobots.Commands;
 
-public class TurnLeftCommand
+public class TurnLeftCommand : ICommand
 {
     private readonly MarsSurface _surface;
     

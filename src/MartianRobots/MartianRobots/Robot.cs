@@ -6,10 +6,8 @@ namespace MartianRobots;
 
 public class Robot
 {
-    private Coordinates _coordinates;
     private readonly MarsSurface _surface;
-    private IDirection _direction;
-
+ 
     public Robot(Coordinates coordinates, MarsSurface surface, IDirection direction)
     {
         _surface = surface;
@@ -25,21 +23,6 @@ public class Robot
         foreach (var command in commandArr)
         {
             CommandFactory.ExecuteCommand(command, _surface);
-            
-            /*if (c.Equals('L'))
-            {
-                _direction = _direction.TurnLeft();
-            }
-
-            if (c.Equals('R'))
-            {
-                _direction = _direction.TurnRight();
-            }
-
-            if (c.Equals('F'))
-            {
-              
-            }*/
         }
 
         return GetRobotPosition();
