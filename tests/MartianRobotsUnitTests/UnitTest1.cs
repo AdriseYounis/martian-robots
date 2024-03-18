@@ -1,15 +1,24 @@
+using FluentAssertions;
+
 namespace MartianRobotsUnitTests;
 
 public class Tests
 {
-    [SetUp]
-    public void Setup()
+   
+    [TestCase]
+    public void TurnLeft()
     {
-    }
+        var command = "L";
+        var position = Robot.ExecuteCommand(command);
 
-    [Test]
-    public void Test1()
+        position.Should().Be("W");
+    }
+}
+
+public class Robot
+{
+    public static string ExecuteCommand(string command)
     {
-        Assert.Pass();
+        throw new NotImplementedException();
     }
 }
