@@ -19,6 +19,7 @@ public class Tests
     
     [TestCase("", "N")]
     [TestCase("R", "E")]
+    [TestCase("RR", "S")]
     public void TurnRight(string command, string expectedDirection)
     {
         var position = Robot.ExecuteCommand(command);
@@ -54,6 +55,11 @@ public class Robot
                 if (direction.Equals("N"))
                 {
                     direction = "E";
+                }
+                
+                if (direction.Equals("E"))
+                {
+                    direction = "S";
                 }
             }
         }
