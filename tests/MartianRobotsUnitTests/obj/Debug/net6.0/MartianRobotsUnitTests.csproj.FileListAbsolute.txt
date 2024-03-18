@@ -103,3 +103,9 @@ C:\workspace\martian-robots\tests\MartianRobotsUnitTests\obj\Debug\net6.0\refint
 C:\workspace\martian-robots\tests\MartianRobotsUnitTests\obj\Debug\net6.0\MartianRobotsUnitTests.pdb
 C:\workspace\martian-robots\tests\MartianRobotsUnitTests\obj\Debug\net6.0\MartianRobotsUnitTests.genruntimeconfig.cache
 C:\workspace\martian-robots\tests\MartianRobotsUnitTests\obj\Debug\net6.0\ref\MartianRobotsUnitTests.dll
+C:\workspace\martian-robots\tests\MartianRobotsUnitTests\bin\Debug\net6.0\CoverletSourceRootsMapping_MartianRobotsUnitTests
+C:\workspace\martian-robots\tests\MartianRobotsUnitTests\bin\Debug\net6.0\MartianRobots.deps.json
+C:\workspace\martian-robots\tests\MartianRobotsUnitTests\bin\Debug\net6.0\MartianRobots.runtimeconfig.json
+C:\workspace\martian-robots\tests\MartianRobotsUnitTests\bin\Debug\net6.0\MartianRobots.exe
+C:\workspace\martian-robots\tests\MartianRobotsUnitTests\bin\Debug\net6.0\MartianRobots.dll
+C:\workspace\martian-robots\tests\MartianRobotsUnitTests\bin\Debug\net6.0\MartianRobots.pdb

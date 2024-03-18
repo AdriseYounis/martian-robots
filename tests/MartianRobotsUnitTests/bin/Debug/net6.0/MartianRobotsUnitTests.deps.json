@@ -9,6 +9,7 @@
       "MartianRobotsUnitTests/1.0.0": {
         "dependencies": {
           "FluentAssertions": "6.12.0",
+          "MartianRobots": "1.0.0",
           "Microsoft.NET.Test.Sdk": "17.6.0",
           "NUnit": "3.13.3",
           "NUnit.Analyzers": "3.6.1",
@@ -735,6 +736,11 @@
             "fileVersion": "4.3.2.0"
           }
         }
+      },
+      "MartianRobots/1.0.0": {
+        "runtime": {
+          "MartianRobots.dll": {}
+        }
       }
     }
   },
@@ -1135,6 +1141,11 @@
       "sha512": "sha512-Et6UFY0PECXPIjvtGOlkfQdVDz75Oi1seBZhyJoJ2ubJZn98FKRcQYIzk6bJSUCHSlsk3bNgIUfC/KJE4j7+ag==",
       "path": "teststack.bddfy/4.3.2",
       "hashPath": "teststack.bddfy.4.3.2.nupkg.sha512"
+    },
+    "MartianRobots/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

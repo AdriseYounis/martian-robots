@@ -1108,6 +1108,16 @@
         "runtime": {
           "lib/netstandard1.5/TestStack.BDDfy.dll": {}
         }
+      },
+      "MartianRobots/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/MartianRobots.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MartianRobots.dll": {}
+        }
       }
     }
   },
@@ -4096,11 +4106,17 @@
         "teststack.bddfy.4.3.2.nupkg.sha512",
         "teststack.bddfy.nuspec"
       ]
+    },
+    "MartianRobots/1.0.0": {
+      "type": "project",
+      "path": "../../src/MartianRobots/MartianRobots/MartianRobots.csproj",
+      "msbuildProject": "../../src/MartianRobots/MartianRobots/MartianRobots.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "FluentAssertions >= 6.12.0",
+      "MartianRobots >= 1.0.0",
       "Microsoft.NET.Test.Sdk >= 17.6.0",
       "NUnit >= 3.13.3",
       "NUnit.Analyzers >= 3.6.1",
@@ -4133,7 +4149,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\workspace\\martian-robots\\src\\MartianRobots\\MartianRobots\\MartianRobots.csproj": {
+              "projectPath": "C:\\workspace\\martian-robots\\src\\MartianRobots\\MartianRobots\\MartianRobots.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

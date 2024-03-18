@@ -1,7 +1,6 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=9954489a_002D46be_002D40fd_002D9f7d_002De3e3c30d391a/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="TurnLeft" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::7EA6672B-A7E2-41E2-BC10-EAD1ADBF021F::net6.0::MartianRobotsUnitTests.Tests.TurnLeft&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::7EA6672B-A7E2-41E2-BC10-EAD1ADBF021F::net6.0::MartianRobotsUnitTests.Tests.TurnRight&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::7EA6672B-A7E2-41E2-BC10-EAD1ADBF021F::net6.0::MartianRobotsUnitTests.Tests&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
