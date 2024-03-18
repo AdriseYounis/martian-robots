@@ -19,6 +19,33 @@ public class DirectionTests
             .BDDfy();
     }
     
+    [Test]
+    public void GivenEastDirection_WhenTurningRight_ThenDirectionIsSouth()
+    {
+        this.Given(_ => ADirection(new East()))
+            .When(_ => TurningRight())
+            .Then(_ => DirectionIs("S"))
+            .BDDfy();
+    }
+    
+    [Test]
+    public void GivenSouthDirection_WhenTurningRight_ThenDirectionIsWest()
+    {
+        this.Given(_ => ADirection(new South()))
+            .When(_ => TurningRight())
+            .Then(_ => DirectionIs("W"))
+            .BDDfy();
+    }
+    
+    [Test]
+    public void GivenWestDirection_WhenTurningRight_ThenDirectionIsNorth()
+    {
+        this.Given(_ => ADirection(new West()))
+            .When(_ => TurningRight())
+            .Then(_ => DirectionIs("N"))
+            .BDDfy();
+    }
+    
     private void DirectionIs(string direction)
     {
         _expectedDirection.ToString().Should().Be(direction);

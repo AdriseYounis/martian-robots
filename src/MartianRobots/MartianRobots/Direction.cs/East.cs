@@ -2,11 +2,11 @@ using MartianRobots.Interfaces.cs;
 
 namespace MartianRobots.Direction.cs;
 
-public class North : IDirection
+public class East : IDirection
 {
     public IDirection TurnRight()
     {
-        return new East();
+        return new South();
     }
 
     public IDirection TurnLeft()
@@ -16,6 +16,6 @@ public class North : IDirection
     
     public override string ToString()
     {
-        return "N" ;
+        return "E" ;
     }
 }
