@@ -1,11 +1,16 @@
 using FluentAssertions;
 using MartianRobots;
 using MartianRobots.Direction.cs;
+using MartianRobots.Interfaces.cs;
+using TestStack.BDDfy;
 
 namespace MartianRobotsUnitTests;
 
 public class Tests
 {
+    private IDirection _direction;
+    private string _expectedPosition;
+    
     [TestCase("", "N")]
     [TestCase("L", "W")]
     [TestCase("LL", "S")]
@@ -13,9 +18,10 @@ public class Tests
     [TestCase("LLLL", "N")]
     public void TurnLeft(string command, string expectedDirection)
     {
-        var position = new Robot(new North()).ExecuteCommand(command);
-
-        position.Should().Be(expectedDirection);
+        this.Given(_ => ADirection(new North()))
+            .When(_ => TheRobotExecutesTheCommand(command))
+            .Then(_ => TheExpectedPositionIs(expectedDirection))
+            .BDDfy();
     }
     
     [TestCase("", "N")]
@@ -25,8 +31,25 @@ public class Tests
     [TestCase("RRRR", "N")]
     public void TurnRight(string command, string expectedDirection)
     {
-        var position = new Robot(new North()).ExecuteCommand(command);
+        this.Given(_ => ADirection(new North()))
+            .When(_ => TheRobotExecutesTheCommand(command))
+            .Then(_ => TheExpectedPositionIs(expectedDirection))
+            .BDDfy();
+    }
+    
+    private void ADirection(IDirection direction)
+    {
+        _direction = direction;
+    }
+    
+    private void TheExpectedPositionIs(string output)
+    {
+        _expectedPosition.Should().Be(output);
+    }
 
-        position.Should().Be(expectedDirection);
+    private void TheRobotExecutesTheCommand(string command)
+    {
+        var robot  = new Robot(_direction);
+        _expectedPosition = robot.ExecuteCommand(command);
     }
 }
