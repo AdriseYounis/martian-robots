@@ -6,9 +6,9 @@ namespace MartianRobots;
 
 public class Robot
 {
-    private readonly MarsSurface _surface;
+    private readonly IMarsSurface _surface;
  
-    public Robot(Coordinates coordinates, MarsSurface surface, IDirection direction)
+    public Robot(Coordinates coordinates, IMarsSurface surface, IDirection direction)
     {
         _surface = surface;
         

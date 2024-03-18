@@ -1,4 +1,4 @@
-namespace MartianRobots.Commands;
+namespace MartianRobots.Interfaces.cs;
 
 public interface ICommand
 {

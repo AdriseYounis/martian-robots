@@ -1,10 +1,11 @@
 using MartianRobots.Constants;
+using MartianRobots.Interfaces.cs;
 
 namespace MartianRobots.Commands;
 
 public static class CommandFactory
 {
-    public static void ExecuteCommand(char command, MarsSurface surface)
+    public static void ExecuteCommand(char command, IMarsSurface surface)
     {
         switch (command)
         {

@@ -1,12 +1,13 @@
+using MartianRobots.Interfaces.cs;
 using MartianRobots.Models;
 
 namespace MartianRobots.Commands;
 
 public class ForwardCommand : ICommand
 {
-    private readonly MarsSurface _surface;
+    private readonly IMarsSurface _surface;
 
-    public ForwardCommand(MarsSurface marsSurface)
+    public ForwardCommand(IMarsSurface marsSurface)
     {
         _surface = marsSurface;
     }

@@ -3,7 +3,7 @@ using MartianRobots.Models;
 
 namespace MartianRobots;
 
-public class MarsSurface
+public class MarsSurface : IMarsSurface
 {
     private readonly Coordinates _upperBound;
     private readonly List<Coordinates> _scentedCoordinates = new();

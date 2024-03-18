@@ -1,10 +1,12 @@
+using MartianRobots.Interfaces.cs;
+
 namespace MartianRobots.Commands;
 
 public class TurnRightCommand : ICommand
 {
-    private readonly MarsSurface _surface;
+    private readonly IMarsSurface _surface;
 
-    public TurnRightCommand(MarsSurface surface)
+    public TurnRightCommand(IMarsSurface surface)
     {
         _surface = surface;
     }
