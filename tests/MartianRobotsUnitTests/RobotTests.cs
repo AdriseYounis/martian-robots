@@ -64,6 +64,16 @@ public class Tests
             .Then(_ => TheExpectedPositionIs("1 1 E"))
             .BDDfy();
     }
+    
+    [Test]
+    public void MoveRobot_OutOfBounds()
+    {
+        this.Given(_ => ADirection(new North()))
+            .And(_ => TheRobotPosition(new Coordinates(3,2)))
+            .When(_ => TheRobotExecutesTheCommand("FRRFLLFFRRFLL"))
+            .Then(_ => TheExpectedPositionIs("3 3 N LOST"))
+            .BDDfy();
+    }
  
     private void TheRobotPosition(Coordinates coordinates)
     {
