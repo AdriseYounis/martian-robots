@@ -24,7 +24,7 @@ public class Tests
         this.Given(_ => ADirection(new North()))
             .And(_ => TheRobotPosition(new Coordinates(0, 0)))
             .When(_ => TheRobotExecutesTheCommand(command))
-            .Then(_ => TheExpectedPositionIs(expectedDirection))
+            .Then(_ => TheExpectedPositionIs($"0 0 {expectedDirection}"))
             .BDDfy();
     }
     
@@ -38,7 +38,7 @@ public class Tests
         this.Given(_ => ADirection(new North()))
             .And(_ => TheRobotPosition(new Coordinates(0, 0)))
             .When(_ => TheRobotExecutesTheCommand(command))
-            .Then(_ => TheExpectedPositionIs(expectedDirection))
+            .Then(_ => TheExpectedPositionIs($"0 0 {expectedDirection}"))
             .BDDfy();
     }
     

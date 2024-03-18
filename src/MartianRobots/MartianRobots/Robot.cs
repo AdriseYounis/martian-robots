@@ -1,3 +1,4 @@
+using MartianRobots.Commands;
 using MartianRobots.Interfaces.cs;
 using MartianRobots.Models;
 
@@ -9,20 +10,23 @@ public class Robot
     private readonly MarsSurface _surface;
     private IDirection _direction;
 
-    public Robot(Coordinates coordinates, MarsSurface marsSurface, IDirection direction)
+    public Robot(Coordinates coordinates, MarsSurface surface, IDirection direction)
     {
-        _coordinates = coordinates;
-        _surface = marsSurface;
-        _direction = direction;
+        _surface = surface;
+        
+        surface.SetRobotLocation(coordinates);
+        surface.SetDirection(direction);
     }
     
     public string ExecuteCommand(string commands)
     {
         var commandArr = commands.ToCharArray();
 
-        foreach (var c in commandArr)
+        foreach (var command in commandArr)
         {
-            if (c.Equals('L'))
+            CommandFactory.ExecuteCommand(command, _surface);
+            
+            /*if (c.Equals('L'))
             {
                 _direction = _direction.TurnLeft();
             }
@@ -35,7 +39,7 @@ public class Robot
             if (c.Equals('F'))
             {
               
-            }
+            }*/
         }
 
         return GetRobotPosition();
@@ -43,9 +47,10 @@ public class Robot
     
     private string GetRobotPosition()
     {
-        var robotPosition = $"{_coordinates.GetX()} {_coordinates.GetY()} {_direction}";
+        var coordinates = _surface.GetRobotLocation();
+        var robotPosition = $"{coordinates.GetX()} {coordinates.GetY()} {_surface.GetDirection()}";
 
-        if (_surface.HasRobotGoneOutOfBounds(_coordinates))
+        if (_surface.HasRobotGoneOutOfBounds(coordinates))
         {
             robotPosition += " LOST";
         }
