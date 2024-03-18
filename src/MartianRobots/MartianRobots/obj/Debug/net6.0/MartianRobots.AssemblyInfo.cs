@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MartianRobots")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5b6c4b2dcdf8d4db30d208aef791b683d47979d5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+15538a629b814e2424686dd57df28f56bdd99308")]
 [assembly: System.Reflection.AssemblyProductAttribute("MartianRobots")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MartianRobots")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

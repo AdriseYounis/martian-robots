@@ -29,13 +29,13 @@ body{margin:0;padding:0;padding-bottom:40px;max-width:100%;background-color:#fff
           <li class='scenarioSummary'>
             <div class='summaryLine'>
               <div class='summaryLabel'>Scenarios</div>
-              <span class='summaryCount'>2</span>
+              <span class='summaryCount'>5</span>
             </div>
           </li>
           <li class='Passed'>
             <div class='summaryLine'>
               <div class='summaryLabel'>Passed</div>
-              <span class='summaryCount'>2</span>
+              <span class='summaryCount'>5</span>
             </div>
           </li>
           <li class='Inconclusive'>
@@ -101,11 +101,53 @@ body{margin:0;padding:0;padding-bottom:40px;max-width:100%;background-color:#fff
                     </li>
                   </ul>
                 </div>
+                <div class='scenario'>
+                  <div class='Passed canToggle scenarioTitle' data-toggle-target='scenario-3'>Move forward</div>
+                  <ul class='steps' id='scenario-3'>
+                    <li class='step Passed  SetupState ' data-toggle-target='step-3-1' >
+                      <span>Given a direction N</span>
+                    </li>
+                    <li class='step Passed  Transition ' data-toggle-target='step-3-2' >
+                      <span>When the robot executes the command RF</span>
+                    </li>
+                    <li class='step Passed  Assertion ' data-toggle-target='step-3-3' >
+                      <span>Then the expected position is 1 0 E</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class='scenario'>
+                  <div class='Passed canToggle scenarioTitle' data-toggle-target='scenario-4'>Move forward</div>
+                  <ul class='steps' id='scenario-4'>
+                    <li class='step Passed  SetupState ' data-toggle-target='step-4-1' >
+                      <span>Given a direction N</span>
+                    </li>
+                    <li class='step Passed  Transition ' data-toggle-target='step-4-2' >
+                      <span>When the robot executes the command RRF</span>
+                    </li>
+                    <li class='step Passed  Assertion ' data-toggle-target='step-4-3' >
+                      <span>Then the expected position is 0 -1 S</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class='scenario'>
+                  <div class='Passed canToggle scenarioTitle' data-toggle-target='scenario-5'>Move forward</div>
+                  <ul class='steps' id='scenario-5'>
+                    <li class='step Passed  SetupState ' data-toggle-target='step-5-1' >
+                      <span>Given a direction N</span>
+                    </li>
+                    <li class='step Passed  Transition ' data-toggle-target='step-5-2' >
+                      <span>When the robot executes the command RRRF</span>
+                    </li>
+                    <li class='step Passed  Assertion ' data-toggle-target='step-5-3' >
+                      <span>Then the expected position is -1 0 W</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </li>
         </ul>
-        <p><span>Tested at: 18/03/2024 15:02:33</span></p>
+        <p><span>Tested at: 18/03/2024 15:04:38</span></p>
       </div>
     </div>
     <div class='footer'>Powered by <a href='https://github.com/TestStack/TestStack.BDDfy'>BDDfy</a> framework</div>

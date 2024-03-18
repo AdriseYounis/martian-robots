@@ -31,9 +31,20 @@ public class Robot
 
             if (c.Equals('F'))
             {
-                if (_direction.ToString() == "N")
+                switch (_direction.ToString())
                 {
-                    _y++;
+                    case "N":
+                        _y++;
+                        break;
+                    case "E":
+                        _x++;
+                        break;
+                    case "S":
+                        _y--;
+                        break;
+                    case "W":
+                        _x--;
+                        break;
                 }
             }
         }

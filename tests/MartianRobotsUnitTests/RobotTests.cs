@@ -39,6 +39,9 @@ public class Tests
     
     [TestCase("", "0 0 N")]
     [TestCase("F", "0 1 N")]
+    [TestCase("RF", "1 0 E")]
+    [TestCase("RRF", "0 -1 S")]
+    [TestCase("RRRF", "-1 0 W")]
     public void MoveForward(string command, string expectedPosition)
     {
         this.Given(_ => ADirection(new North()))
