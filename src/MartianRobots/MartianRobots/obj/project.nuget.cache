@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "+09M4IPrJj05AUpHxVbkZ/aHVuORC6+XI3rlkh1mli5yEXGW4+5xU3R0N03IaA071Y5EqafY0IkYaahSbynfxA==",
+  "success": true,
+  "projectFilePath": "C:\\workspace\\martian-robots\\src\\MartianRobots\\MartianRobots\\MartianRobots.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\adrise\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.25\\microsoft.netcore.app.ref.6.0.25.nupkg.sha512",
+    "C:\\Users\\adrise\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.25\\microsoft.windowsdesktop.app.ref.6.0.25.nupkg.sha512",
+    "C:\\Users\\adrise\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.25\\microsoft.aspnetcore.app.ref.6.0.25.nupkg.sha512",
+    "C:\\Users\\adrise\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.25\\microsoft.netcore.app.host.win-x64.6.0.25.nupkg.sha512"
+  ],
+  "logs": []
+}

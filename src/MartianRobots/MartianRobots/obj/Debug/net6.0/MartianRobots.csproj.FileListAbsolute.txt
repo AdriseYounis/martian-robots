@@ -1,0 +1,15 @@
+C:\workspace\martian-robots\src\MartianRobots\MartianRobots\bin\Debug\net6.0\MartianRobots.exe
+C:\workspace\martian-robots\src\MartianRobots\MartianRobots\bin\Debug\net6.0\MartianRobots.deps.json
+C:\workspace\martian-robots\src\MartianRobots\MartianRobots\bin\Debug\net6.0\MartianRobots.runtimeconfig.json
+C:\workspace\martian-robots\src\MartianRobots\MartianRobots\bin\Debug\net6.0\MartianRobots.dll
+C:\workspace\martian-robots\src\MartianRobots\MartianRobots\bin\Debug\net6.0\MartianRobots.pdb
+C:\workspace\martian-robots\src\MartianRobots\MartianRobots\obj\Debug\net6.0\MartianRobots.GeneratedMSBuildEditorConfig.editorconfig
+C:\workspace\martian-robots\src\MartianRobots\MartianRobots\obj\Debug\net6.0\MartianRobots.AssemblyInfoInputs.cache
+C:\workspace\martian-robots\src\MartianRobots\MartianRobots\obj\Debug\net6.0\MartianRobots.AssemblyInfo.cs
+C:\workspace\martian-robots\src\MartianRobots\MartianRobots\obj\Debug\net6.0\MartianRobots.csproj.CoreCompileInputs.cache
+C:\workspace\martian-robots\src\MartianRobots\MartianRobots\obj\Debug\net6.0\MartianRobots.sourcelink.json
+C:\workspace\martian-robots\src\MartianRobots\MartianRobots\obj\Debug\net6.0\MartianRobots.dll
+C:\workspace\martian-robots\src\MartianRobots\MartianRobots\obj\Debug\net6.0\refint\MartianRobots.dll
+C:\workspace\martian-robots\src\MartianRobots\MartianRobots\obj\Debug\net6.0\MartianRobots.pdb
+C:\workspace\martian-robots\src\MartianRobots\MartianRobots\obj\Debug\net6.0\MartianRobots.genruntimeconfig.cache
+C:\workspace\martian-robots\src\MartianRobots\MartianRobots\obj\Debug\net6.0\ref\MartianRobots.dll
