@@ -5,13 +5,13 @@ namespace MartianRobotsUnitTests;
 public class Tests
 {
    
-    [TestCase]
-    public void TurnLeft()
+    [TestCase("", "N")]
+    [TestCase("L", "W")]
+    public void TurnLeft(string command, string expectedDirection)
     {
-        var command = "L";
         var position = Robot.ExecuteCommand(command);
 
-        position.Should().Be("W");
+        position.Should().Be(expectedDirection);
     }
 }
 
