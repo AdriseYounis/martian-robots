@@ -1,5 +1,6 @@
 using FluentAssertions;
 using MartianRobots;
+using MartianRobots.Direction.cs;
 
 namespace MartianRobotsUnitTests;
 
@@ -12,7 +13,7 @@ public class Tests
     [TestCase("LLLL", "N")]
     public void TurnLeft(string command, string expectedDirection)
     {
-        var position = Robot.ExecuteCommand(command);
+        var position = new Robot(new North()).ExecuteCommand(command);
 
         position.Should().Be(expectedDirection);
     }
@@ -24,7 +25,7 @@ public class Tests
     [TestCase("RRRR", "N")]
     public void TurnRight(string command, string expectedDirection)
     {
-        var position = Robot.ExecuteCommand(command);
+        var position = new Robot(new North()).ExecuteCommand(command);
 
         position.Should().Be(expectedDirection);
     }

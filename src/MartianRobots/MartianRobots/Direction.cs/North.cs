@@ -11,7 +11,7 @@ public class North : IDirection
 
     public IDirection TurnLeft()
     {
-        throw new NotImplementedException();
+        return new West();
     }
     
     public override string ToString()
