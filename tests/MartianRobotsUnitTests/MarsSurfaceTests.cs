@@ -1,4 +1,5 @@
 using FluentAssertions;
+using MartianRobots;
 using MartianRobots.Models;
 using TestStack.BDDfy;
 
@@ -17,6 +18,16 @@ public class MarsSurfaceTests
             .And(_ => MarsSurfaceIsCreated(new Coordinates(5, 3)))
             .When(_ => AddScentedIsInvoked(_coordinates))
             .And(_ => CheckingIfRobotIsOutOfBound())
+            .Then(_ => RobotIsOutOfBounds(true))
+            .BDDfy();
+    }
+    
+    [Test]
+    public void GivenCoordinatesOutOfBound_WhenInvokingIsRobotOutOfBounds_ThenCoordinatesAreOutOfBounds()
+    {
+        this.Given(_ => ASetOfCoordinates(new Coordinates(6,4)))
+            .And(_ => MarsSurfaceIsCreated(new Coordinates(5, 3)))
+            .When(_ => IsRobotOutOfBoundsIsInvoked(_coordinates))
             .Then(_ => RobotIsOutOfBounds(true))
             .BDDfy();
     }
@@ -49,28 +60,5 @@ public class MarsSurfaceTests
     private void ASetOfCoordinates(Coordinates coordinates)
     {
         _coordinates = coordinates;
-    }
-}
-
-internal class MarsSurface
-{
-    public MarsSurface(Coordinates coordinates)
-    {
-        throw new NotImplementedException();
-    }
-
-    public bool IsRobotOutOfBounds(Coordinates coordinates)
-    {
-        throw new NotImplementedException();
-    }
-
-    public void AddScentedCoordinates(Coordinates coordinates)
-    {
-        throw new NotImplementedException();
-    }
-
-    public bool HasRobotGoneOutOfBounds(Coordinates coordinates)
-    {
-        throw new NotImplementedException();
     }
 }

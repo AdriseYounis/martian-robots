@@ -6,11 +6,13 @@ namespace MartianRobots;
 public class Robot
 {
     private Coordinates _coordinates;
+    private readonly MarsSurface _surface;
     private IDirection _direction;
 
-    public Robot(Coordinates coordinates, IDirection direction)
+    public Robot(Coordinates coordinates, MarsSurface marsSurface, IDirection direction)
     {
         _coordinates = coordinates;
+        _surface = marsSurface;
         _direction = direction;
     }
     
@@ -32,10 +34,29 @@ public class Robot
 
             if (c.Equals('F'))
             {
+                var previousCoordinates = new Coordinates(_coordinates.GetX(), _coordinates.GetY());
+                
                 _coordinates = _direction.Move(_coordinates);
+                
+                if (_surface.IsRobotOutOfBounds(_coordinates) && !_surface.IsScented(previousCoordinates))
+                {
+                    _surface.AddScentedCoordinates(previousCoordinates);   
+                }
             }
         }
 
-        return $"{_coordinates.GetX()} {_coordinates.GetY()} {_direction}";
+        return GetRobotPosition();
+    }
+    
+    private string GetRobotPosition()
+    {
+        var robotPosition = $"{_coordinates.GetX()} {_coordinates.GetY()} {_direction}";
+
+        if (_surface.HasRobotGoneOutOfBounds(_coordinates))
+        {
+            robotPosition += " LOST";
+        }
+
+        return robotPosition;
     }
 }

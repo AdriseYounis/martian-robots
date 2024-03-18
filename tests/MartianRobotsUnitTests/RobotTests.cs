@@ -9,6 +9,7 @@ namespace MartianRobotsUnitTests;
 
 public class Tests
 {
+    private readonly MarsSurface _surface = new(new Coordinates(5, 3));
     private IDirection _direction;
     private string _expectedPosition;
     private Coordinates _robotPosition;
@@ -92,7 +93,7 @@ public class Tests
 
     private void TheRobotExecutesTheCommand(string command)
     {
-        var robot  = new Robot(_robotPosition, _direction);
+        var robot  = new Robot(_robotPosition, _surface, _direction);
         _expectedPosition = robot.ExecuteCommand(command);
     }
 }
