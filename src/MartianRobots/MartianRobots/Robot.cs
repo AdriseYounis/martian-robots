@@ -28,6 +28,6 @@ public class Robot
             }
         }
 
-        return _direction.ToString();
+        return $"0 0 {_direction}";
     }
 }

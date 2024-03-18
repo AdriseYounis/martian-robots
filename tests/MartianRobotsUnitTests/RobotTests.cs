@@ -38,6 +38,7 @@ public class Tests
     }
     
     [TestCase("", "0 0 N")]
+    [TestCase("F", "0 1 N")]
     public void MoveForward(string command, string expectedPosition)
     {
         this.Given(_ => ADirection(new North()))
