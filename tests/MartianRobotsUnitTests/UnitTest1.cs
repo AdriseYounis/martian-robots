@@ -54,26 +54,14 @@ public class Robot
 
             if (c.Equals('R'))
             {
-                if (direction.Equals("N"))
+                direction = direction switch
                 {
-                    direction = "E";
-                }
-                
-                else if (direction.Equals("E"))
-                {
-                    direction = "S";
-                }
-                
-                else if (direction.Equals("S"))
-                {
-                    direction = "W";
-                }
-                
-                else if (direction.Equals("W"))
-                {
-                    direction = "N";
-                }
-
+                    "N" => "E",
+                    "E" => "S",
+                    "S" => "W",
+                    "W" => "N",
+                    _ => direction
+                };
             }
         }
         
