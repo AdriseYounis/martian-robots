@@ -81,7 +81,7 @@ dotnet test
 
 ## Run the Application to see the output
 
-- Please modify the file path in program.cs to point to the location of InputFile.txt on your machine.
+- Please modify the file path in program.cs to point to the location of TestCases.txt on your machine.
 - I have crated a FileReader.cs class which reads the given test cases from the file and creates the Mars Surface / Robot and executes its instructions.
 - If the file path is pointed correctly, then run f5 and this will execute the given inputs above and display the output.
 
