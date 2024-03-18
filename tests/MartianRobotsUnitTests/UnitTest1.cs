@@ -19,6 +19,13 @@ public class Robot
 {
     public static string ExecuteCommand(string command)
     {
-        throw new NotImplementedException();
+        var direction = "N";
+
+        if (command.Equals("L") && direction.Equals("N"))
+        {
+            return "W";
+        }
+
+        return direction;
     }
 }
