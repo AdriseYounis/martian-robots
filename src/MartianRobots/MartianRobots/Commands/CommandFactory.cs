@@ -11,6 +11,12 @@ public static class CommandFactory
             case Command.Left:
                 new TurnLeftCommand(surface).Execute();
                 break;
+            case Command.Right:
+                new TurnRightCommand(surface).Execute();
+                break;
+            case Command.Forward:
+                new ForwardCommand(surface).Execute();
+                break;
         }
     }
 }
